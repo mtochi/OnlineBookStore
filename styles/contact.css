@@ -1,0 +1,78 @@
+body{
+    /*background-color: #dfdce3;*/
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+
+
+}
+
+#contactForm{
+    float: right;
+    margin-right: 70px;
+
+}
+
+#name, #email{
+    width: 500px;
+
+}
+
+#name{
+    margin-left: 58px;
+    height: 20px;
+}
+#email{
+    margin-left: 63px;
+    height: 20px;
+}
+
+#comment{
+    margin-left: 25px;
+    width: 498px;
+}
+
+form{
+    padding-top: 10px;
+}
+
+#emailing{
+    float: left;
+    margin-left: 70px;
+}
+
+#heading{
+    /*text-align: center;*/
+    font-size: 30px;
+    margin-left: 70px;
+}
+#theAddress1{
+    margin-left: 24px;
+}
+#theAddress2{
+    margin-left: 108px;
+}
+
+#theAddress3{
+    margin-left: 108px;
+}
+
+#formField *{
+    vertical-align: top;
+}
+
+#theButton{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 570px;
+    margin-bottom: 10px;
+}
+#theMap{
+    text-align: center;
+}
+
+
+#theNumber{
+    margin-left: 15px;
+}

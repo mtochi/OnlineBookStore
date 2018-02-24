@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Heebo');
+    </style>
+
+
+
+</head>
+<body>
+    <div class="topNav">
+        <a href="index.html">Home</a>
+        <a href="productList.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#">Contact</a>
+        <a href="shoppingCart.html" id="theShoppingCart"><img src="images/shoppingCart.jpg" width="15"> Shopping Cart</a>
+    </div>
+
+    <div id="heading">
+        <h2>Contact Us</h2>
+    </div>
+    <div id="emailing">
+
+        <p>Email us at: <a href="mailto:medinatoci@hotmail.com?Subject=Hello">medinatoci@hotmail.com</a></p>
+        <p>Phone no. <span id="theNumber">+389520216465</span></p>
+        <p>Address: <span id="theAddress1">SomeAddress nr.18,</span>
+            <br><span id="theAddress2">10000 Skopje</span>
+            <br><span id="theAddress3">Macedonia</span></p>
+
+    </div>
+    <div id="contactForm">
+        <form>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+        </form>
+
+        <form>
+            <label for="email">Email</label>
+            <input id="email" type="email">
+        </form>
+
+        <form id="formField">
+            <label id="theComment" for="comment">Comment</label>
+            <textarea id="comment" cols="96" rows="10"></textarea>
+        </form>
+
+        <form>
+            <button id="theButton">Send</button>
+        </form>
+    </div>
+
+    <div id="theMap">
+        <iframe width="90%" height="300px" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"
+                src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed">
+        </iframe>
+    </div>
+    <div id="footer">
+        <p>&copy Medina Tochi</p>
+    </div>
+</body>
+</html>

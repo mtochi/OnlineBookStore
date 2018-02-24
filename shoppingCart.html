@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/jquery/jquery.js"></script>
+    <script src="scripts/jquery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="scripts/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/shoppingCart.css">
+    <script src="scripts/js.cookie.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Heebo');
+    </style>
+
+    <script>
+        /*
+        var retrievedObject = localStorage.getItem('');
+        console.log('retrievedObject: ', JSON.parse(retrievedObject));
+        */
+
+        var sum = 0;
+        var products = [];
+        $(function(){
+
+            //reading from local storage
+            console.log(localStorage.getItem(localStorage.key(0)));
+
+            for(var i = 0, j = 0; i < localStorage.length; i++, j++){
+                //reading from local storage
+                console.log(localStorage.getItem(localStorage.key(i)));
+                var temp = localStorage.getItem(localStorage.key(i));
+                products[j] = JSON.parse(temp);
+
+            }
+            console.log(products);
+            //console.log(products[0].id);
+
+            //all from local storage are in products array
+            //appending them in the HTML
+            for(i = 0; i < products.length; i++){
+                $("#mainContent").append("<tr id='" + i + "'><td><img src='"  + products[i].image + "'></td><td><h4>" + products[i].title + "</h4><h5>by " + products[i].author + " </h5></td><td><h6>$" + products[i].price + "</h6></td><td><input type='button' onclick='remove(this, " + i + ")' value='Remove'></td></tr>");
+                //console.log(parseInt(products[i].price));
+                sum += parseInt(products[i].price);
+            }
+
+
+            $("#checkingOutPart").append("<p id='theSum'>Total: $" + sum + "</p><input type='button' value='Check out' id='checkingOutButton'>");
+
+            var length = parseInt(localStorage.length);
+            if(length == 0){
+                document.getElementById("checkingOutPart").innerHTML = "";
+            }
+
+            $("#dialog").hide();
+
+            $("#checkingOutButton").click(function(){
+                $("#userName").val(Cookies.get("userName"));
+                $("#email").val(Cookies.get("email"));
+                $("#dialog").dialog({
+                    height: "auto",
+                    modal: true,
+                    width: 400,
+                    buttons:{
+                        "Buy Now": function(){
+                            Cookies.set("userName", $("#userName").val());
+                            Cookies.set("email", $("#email").val());
+                            console.log(Cookies.get("userName"));
+
+                            $("#userName").val("");
+                            $("#email").val("");
+                            $("#telNo").val("");
+                            $("#cardName").val("");
+                            $("#cardNo").val("");
+                            $("#cardCvv").val("");
+
+                            $(this).dialog("close");
+                            localStorage.clear();
+                            location.reload();
+                        },
+                        Cancel: function(){
+                            $("#userName").val("");
+                            $("#email").val("");
+                            $("#telNo").val("");
+                            $("#cardName").val("");
+                            $("#cardNo").val("");
+                            $("#cardCvv").val("");
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            });
+
+
+        });
+
+        var remove = function(input, id){
+            console.log(localStorage.getItem(localStorage.key(id)));
+
+            console.log(products[id]);
+            console.log(products);
+
+            //delete from products array
+            if(id > -1){
+                products.splice(id, 1);
+            }
+
+            console.log(products);
+
+            //delete from local Storage
+            localStorage.removeItem(localStorage.key(id));
+            console.log(localStorage);
+
+            //refresh the page
+            location.reload();
+            var length = parseInt(localStorage.length);
+            if(length == 0){
+                document.getElementById("checkingOutPart").innerHTML = "";
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="topNav">
+        <a href="index.html">Home</a>
+        <a href="productList.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" id="theShoppingCart"><img src="images/shoppingCart.jpg" width="15"> Shopping Cart</a>
+    </div>
+
+    <div id="content">
+        <table>
+            <thead></thead>
+            <tbody id="mainContent">
+
+            </tbody>
+        </table>
+
+        <div id="checkingOutPart">
+
+        </div>
+
+    </div>
+
+    <div id="dialog" title="Checkout">
+        <p>This is the dialog</p>
+        <form>
+
+            <label for="userName">Name</label>
+            <input type="text" id="userName"><br>
+
+            <label for="email">Email</label>
+            <input type="text" id="email"><br>
+
+            <label for="telNo">Telephone number</label>
+            <input type="text" id="telNo"><br>
+
+            <label for="cardName">Name on Card</label>
+            <input type="text" id="cardName"><br>
+
+            <label for="cardNo">Card number</label>
+            <input type="text" id="cardNo"><br>
+
+            <label for="cardValid">Valid: </label>
+            <div id="cardValid">
+                <select id="monthValid">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select id="yearValid">
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </div>
+
+            <label for="cardCvv">CVV</label>
+            <input type="text" id="cardCvv"><br>
+
+
+        </form>
+
+    </div>
+
+    <div id="footer">
+        <p>&copy Medina Tochi</p>
+    </div>
+</body>
+</html>

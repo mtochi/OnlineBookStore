@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/gallery.css">
+    <script src="scripts/productList.js" type="text/javascript"></script>
+    <script src="scripts/jquery/jquery.js"></script>
+    <script src="scripts/jquery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="scripts/jquery/jquery-ui.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Heebo');
+    </style>
+
+    <script>
+        var id;
+        $(function(){
+            id = 3;
+            getProduct(id);
+            //when one of the left or right keys is pressed
+            $(document).keyup(function(e) {
+                if (e.which === 39) {
+                    //right was pressed
+                    next();
+                }
+                if(e.which == 37){
+                    //left was pressed
+                    back();
+                }
+            });
+        });
+        var next = function(){
+            document.getElementById("content").innerHTML = "";
+            if(id + 1 <= 19){
+                id = id + 1;
+            }else{ //if id + 1 is greater than the length of the json object
+                id = id - 19;
+            }
+
+            getProduct(id);
+        };
+        var back = function(){
+            document.getElementById("content").innerHTML = "";
+            if(id - 1 >= 0){
+                id = id - 1;
+            }else{ //if id - 1 < 0
+                id = id + 19;
+            }
+
+            getProduct(id);
+        };
+
+        var getProduct = function(id){
+            $.getJSON("json/products.json", function(json){
+                $("#content").append("<img onclick='back()' class='leftArrow' src='images/leftArrow.png'>");
+                $("#content").append("<img class='gallery_product' src='" + json.books[id].image + "'>");
+                $("#content").append("<h4>" + json.books[id].title + "</h4><h5>by " + json.books[id].author + " </h5><p>" + json.books[id].description + "</p>");
+
+
+
+                $("#content").append("<img onclick='next()' class='rightArrow' src='images/rightArrow.png'>");
+
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="topNav">
+        <a href="index.html">Home</a>
+        <a href="productList.html">Products</a>
+        <a href="#">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="shoppingCart.html" id="theShoppingCart"><img src="images/shoppingCart.jpg" width="15"> Shopping Cart</a>
+    </div>
+
+    <header>
+
+    </header>
+
+    <div id="content">
+
+    </div>
+
+    <div id="footer">
+        <p>&copy Medina Tochi</p>
+    </div>
+</body>
+</html>

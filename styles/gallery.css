@@ -1,0 +1,47 @@
+header h3{
+    margin-left: 70px;
+}
+
+
+
+#content h4{
+    margin-left: 34%;
+    margin-top: -15%;
+}
+
+#content h5{
+    margin-left: 34%;
+    margin-top: -1%;
+}
+
+#content p{
+    margin-left: 34%;
+    padding-right: 20%;
+}
+
+.gallery_product{
+    margin-bottom: 3%;
+    margin-left: 3%;
+}
+
+.rightArrow{
+    margin-left: 77%;
+    margin-top: -14%;
+}
+
+.leftArrow{
+    margin-left: 10%;
+    padding-top: 7%;
+}
+
+.leftArrow:hover{
+    cursor: pointer;
+}
+.rightArrow:hover{
+    cursor: pointer;
+}
+
+#footer{
+    margin-top: 10%;
+}
+

@@ -1,0 +1,53 @@
+.mainContent{
+    margin-top: 2%;
+}
+ul{
+    list-style-type: none;
+}
+
+p{
+  font-size: 13px;
+}
+td h4{
+    margin-top: -4%;
+}
+td h5{
+    margin-top: -15px;
+}
+
+td p{
+    padding-right: 109px;
+}
+
+td button{
+    margin-left: -100px;
+}
+
+td h6{
+    margin-left: -46px;
+    font-size: 15px;
+    margin-top: 32px;
+}
+
+tr{
+    margin-top: 2%;
+}
+
+.imagePadding{
+    padding-bottom: 25px;
+}
+
+td input{
+    margin-left: -75px;
+}
+
+#addingToCart{
+    margin-left: 65%;
+}
+
+span{
+    margin-left: 2%;
+}
+
+
+

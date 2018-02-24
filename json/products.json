@@ -1,0 +1,184 @@
+{
+  "books":[
+    {
+      "id": 1,
+      "image": "images/theBooks/power.jpg",
+      "author": "Charles Duhigg",
+      "title": "The Power of Habit",
+      "isbn": 9780812981605,
+      "price": "10",
+      "description": "The Power of Habit: Why We Do What We Do in Life and Business is a book by Charles Duhigg. It explores the science behind habit creation and reformation. "
+    },
+    {
+      "id": 2,
+      "image": "images/theBooks/winFriends.jpg",
+      "author": "Dale Carnegie",
+      "title": "How to Win Friends and Influence People",
+      "isbn": 9780671027032,
+      "price": "12",
+      "description": "How to Win Friends and Influence People is one of the first best-selling self-help books ever published."
+    },
+    {
+      "id": 3,
+      "image": "images/theBooks/thinking.jpg",
+      "author": "Daniel Kahneman",
+      "title": "Thinking, Fast and Slow",
+      "isbn": 9780374275631,
+      "price": "9",
+      "description": "Thinking, Fast and Slow is a best-selling book published in 2011 by Nobel Memorial Prize in Economics laureate Daniel Kahneman."
+    },
+    {
+      "id": 4,
+      "image": "images/theBooks/habits.png",
+      "author": "Stephen Covey",
+      "title": "The 7 Habits of Highly Effective People",
+      "isbn": 9780812981605,
+      "price": "10",
+      "description": "The 7 Habits of Highly Effective People, first published in 1989, is a business and self-help book written by Stephen R. Covey. "
+    },
+    {
+      "id": 5,
+      "image": "images/theBooks/secret.jpg",
+      "author": "Rhonda Byrne",
+      "title": "The Secret",
+      "isbn": 9780812981605,
+      "price": "20",
+      "description": "The Secret is a best-selling 2006 self-help book written by Rhonda Byrne, based on the earlier film of the same name."
+    },
+    {
+      "id": 6,
+      "image": "images/theBooks/rich.jpg",
+      "author": "Napoleon Hill",
+      "title": "Think and Grow Rich",
+      "isbn": 9780812981605,
+      "price": "15",
+      "description": "Think and Grow Rich was written in 1937 by Napoleon Hill, promoted as a personal development and self-improvement book."
+    },
+    {
+      "id": 7,
+      "image": "images/theBooks/now.jpg",
+      "author": "Eckhart Tolle",
+      "title": "The Power of Now: A Guide to Spiritual Enlightenment",
+      "isbn": 9780812981605,
+      "price": "8",
+      "description": "The book is intended to be a guide for day-to-day living and stresses the importance of living in the present moment and avoiding thoughts of the past or future."
+    },
+    {
+      "id": 8,
+      "image": "images/theBooks/road.jpg",
+      "author": "M. Scott Peck",
+      "title": "The ROAD LESS TRAVELED ",
+      "isbn": 9780812981605,
+      "price": "10",
+      "description": "Dr. M. Scott Peck, a practicing psychiatrist, suggests ways in which confronting and resolving our problems can enable us to reach a higher level of self-understanding."
+    },
+    {
+      "id": 9,
+      "image": "images/theBooks/4hour.jpg",
+      "author": "Timothy Ferris",
+      "title": "The 4-Hour Workweek",
+      "isbn": 9780812981605,
+      "price": "9",
+      "description": "The 4-Hour Workweek: Escape 9-5, Live Anywhere, and Join the New Rich is a self-help book by Timothy Ferriss, an American writer, educational activist, and entrepreneur."
+    },
+    {
+      "id": 10,
+      "image": "images/theBooks/cybernetics.jpg",
+      "author": "Maxwell Maltz",
+      "title": "Psycho-Cybernetics",
+      "isbn": 9780812981605,
+      "price": "7",
+      "description": "Psycho-Cybernetics is a self-help book written by Maxwell Maltz in 1960. Motivational and self-help experts in personal development, including Zig Ziglar, Tony Robbins, Brian Tracy have based their techniques on Maxwell Maltz."
+    },
+    {
+      "id": 11,
+      "image": "images/theBooks/badass.png",
+      "author": "Jen Sincero",
+      "title": "You Are a Badass",
+      "isbn": 9780812981605,
+      "price": "13",
+      "description": "YOU ARE A BADASS IS THE SELF-HELP BOOK FOR PEOPLE WHO DESPERATELY WANT TO IMPROVE THEIR LIVES BUT DON'T WANT TO GET BUSTED DOING IT."
+    },
+    {
+      "id": 12,
+      "image": "images/theBooks/happiness.jpg",
+      "author": "Gretchen Rubin",
+      "title": "The Happiness Project",
+      "isbn": 9780812981605,
+      "price": "12",
+      "description": "The Happiness Project was written by Gretchen Rubin, one of the world's most influential and inspirational writers of self-help books today."
+    },
+    {
+      "id": 13,
+      "image": "images/theBooks/cheese.jpg",
+      "author": "Spencer Johnson",
+      "title": "Who Moved My Cheese?",
+      "isbn": 9780812981605,
+      "price": "12",
+      "description": "Who Moved My Cheese? An Amazing Way to Deal with Change in Your Work and in Your Life, published on September 8, 1998, is a motivational business fable."
+    },
+    {
+      "id": 14,
+      "image": "images/theBooks/big.png",
+      "author": "David Schwartz",
+      "title": "The Magic of Thinking Big",
+      "isbn": 9780812981605,
+      "price": "10",
+      "description": "The Magic of Thinking Big, first published in 1959, is a self-help book by David Schwartz. The book which has sold over 4 million copies, instructs people to set their goals high and think positively to achieve them."
+    },
+    {
+      "id": 15,
+      "image": "images/theBooks/48laws.png",
+      "author": "Robert Greene",
+      "title": "The 48 Laws of Power",
+      "isbn": 9780812981605,
+      "price": "10",
+      "description": "The 48 Laws of Power is the first book by American author Robert Greene. The book is a bestseller, selling over 1.2 million copies in the United States, and is popular with prison inmates and celebrities."
+    },
+    {
+      "id": 16,
+      "image": "images/theBooks/heal.jpg",
+      "author": "Louisa L. Hay",
+      "title": "You Can Heal Your Life",
+      "isbn": 9780812981605,
+      "price": "13",
+      "description": "You Can Heal Your Life is 1984 self-help and new thought book by Louisa L. Hay. It was the second book by the author, after Heal your Body which she wrote at age 60."
+    },
+    {
+      "id": 17,
+      "image": "images/theBooks/untethered.jpg",
+      "author": "Michael A. Singer",
+      "title": "The Untethered Soul: The Journey Beyond Yourself",
+      "isbn": 9780812981605,
+      "price": "11",
+      "description": "This beautiful hardcover gift edition with satin ribbon bookmark features a new preface by author and spiritual teacher Michael A. Singer."
+    },
+    {
+      "id": 18,
+      "image": "images/theBooks/worry.jpg",
+      "author": "Dale Carnegie",
+      "title": "How to Stop Worrying and Start Living",
+      "isbn": 9780812981605,
+      "price": "15",
+      "description": "How to Stop Worrying and Start Living is a self-help book by Dale Carnegie. It was first printed in Great Britain in 1948 by Richard Clay, Ltd., Bungay Suffolk."
+    },
+    {
+      "id": 19,
+      "image": "images/theBooks/one.jpg",
+      "author": "Gary W. Keller and Jay Papasan",
+      "title": "The ONE Thing",
+      "isbn": 9780812981605,
+      "price": "14",
+      "description": "The ONE Thing: The Surprisingly Simple Truth Behind Extraordinary Results is a non-fiction, self-help book written by authors and real estate entrepreneurs, Gary W. Keller and Jay Papasan."
+    },
+    {
+      "id": 20,
+      "image": "images/theBooks/earth.jpg",
+      "author": "Eckhart Tolle",
+      "title": "A New Earth: Awakening to Your Life’s Purpose ",
+      "isbn": 9780812981605,
+      "price": "12",
+      "description": "A New Earth: Awakening to Your Life’s Purpose is a self-help book by Eckhart Tolle. First published in 2005, it sold 5 million copies in North America by 2009."
+    }
+  ]
+}

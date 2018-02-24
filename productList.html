@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="scripts/jquery/jquery.js"></script>
+    <script src="scripts/jquery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="scripts/jquery/jquery-ui.min.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/productList.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Heebo');
+    </style>
+
+    <script>
+        var data = [];
+        $(function(){
+            $.getJSON("json/products.json", function (json) {
+                //console.log(json.books.length);
+                var i;
+
+                var booksLength = json.books.length;
+                var products;
+                for(i = 0; i < booksLength; i++){
+
+                   // using tables
+                    data[i] =  json.books[i];
+                    $("#theList").append("<tr id='" + i + "'>" + "<td class='imagePadding'><img src='"  + json.books[i].image + "'></td>" + "<td><h4>" + json.books[i].title + "</h4><h5>by " + json.books[i].author + " </h5><p>" + json.books[i].description + "</p></td>" + "<td><input name='theCheckboxes' type='checkbox' value='" + i + "'></td>" + "<td><h6>$" + json.books[i].price + "</h6></td>" + "</tr>"); //after h6 button
+
+                }
+            });
+
+            //adding the products to cart
+            $("#addingToCart").click(function(){
+                var checkboxes = document.getElementsByName('theCheckboxes');
+                console.log(checkboxes);
+                var checkBoxesChecked = [];
+
+                for(var i = 0; i < checkboxes.length; i++){
+                    if(checkboxes[i].checked){
+                        checkBoxesChecked.push(checkboxes[i].value);
+                        //console.log(data[i]);
+                        var id = data[i].id;
+                        //saving in local storage
+                        localStorage.setItem( "'" + id + "'", JSON.stringify(data[i]));
+
+                        //reading from local storage - should be put on the shoppingCart page
+                        var prod = localStorage.getItem("'" + id + "'");
+                        console.log(JSON.parse(prod));
+
+                    }
+                }
+                $('input:checkbox').each(function () {
+                    if(this.checked) {
+                        $(this).attr('checked', false);
+                    }
+                });
+
+
+            });
+
+        });
+    </script>
+
+
+
+</head>
+<body>
+    <div class="topNav">
+        <a href="index.html">Home</a>
+        <a href="#">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="shoppingCart.html" id="theShoppingCart"><img src="images/shoppingCart.jpg" width="15"> Shopping Cart</a>
+    </div>
+    <div class="mainContent">
+        <span>Select a checkbox to add the product to cart</span>
+        <button id="addingToCart">Add to Cart</button>
+        <table id="theList" style="margin: 2%;">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="footer">
+        <p>&copy Medina Tochi</p>
+    </div>
+</body>
+</html>
